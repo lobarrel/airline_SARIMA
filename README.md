@@ -16,9 +16,11 @@ q: Trend moving average order.
 
 There are four seasonal elements that are not part of ARIMA that must be configured; they are:
 
-P: Seasonal autoregressive order.
-D: Seasonal difference order.
-Q: Seasonal moving average order.
-m: The number of time steps for a single seasonal period. For example, an S of 12 for monthly data suggests a yearly seasonal cycle.
+The seasonal component of SARIMA models adds the following three components:
+
+- Seasonal Autoregressive order (P): This component captures the relationship between the current value of the series and its past values, specifically at seasonal lags.
+- Seasonal Difference order (D): Similar to the non-seasonal differencing, this component accounts for the differencing required to remove seasonality from the series.
+- Seasonal Moving Average order (Q): This component models the dependency between the current value and the residual errors of the previous predictions at seasonal lags.
+- m: The number of time steps for a single seasonal period. For example, an S of 12 for monthly data suggests a yearly seasonal cycle.
 
 **SARIMA notation: SARIMA(p,d,q)(P,D,Q,m)**
